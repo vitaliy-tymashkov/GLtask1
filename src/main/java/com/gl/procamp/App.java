@@ -8,8 +8,5 @@ public class App {
 
     public static void main(String[] args) {
         readConfigurationFromFile(PROPERTIES_FILE_NAME);
-
-
-//        new SumCalculator(FILE_NAME).calculate();
     }
 }
