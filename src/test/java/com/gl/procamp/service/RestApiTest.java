@@ -44,7 +44,7 @@ public class RestApiTest {
     @Test(dependsOnMethods = "testWhenGetPostsThenStatus200AndContentTypeJson")
     public void testWhenCreateUserThenNewUserCreated() {
         String validRequest = getUserJson();
-        logger.info("Create user request %s", validRequest);
+        logger.info("Create user request {}", validRequest);
 
         Response response =
                 given()
@@ -72,7 +72,7 @@ public class RestApiTest {
     @Test(dependsOnMethods = "testWhenCreateUserThenNewUserCreated")
     public void testWhenPatchUserThenStatus200() {
         String validRequest = getUserPatchedJson(userId);
-        logger.info("Patch user request %s", validRequest);
+        logger.info("Patch user request {}", validRequest);
 
         given()
                 .headers(
