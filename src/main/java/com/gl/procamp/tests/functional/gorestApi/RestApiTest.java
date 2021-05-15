@@ -50,7 +50,7 @@ public class RestApiTest extends RestApiBaseClass {
     @Test(dependsOnMethods = "testWhenGetPostsThenStatus200AndContentTypeJson")
     public void testWhenCreateUserThenNewUserCreated() {
         String validRequest = getUserJson();
-        logger.info("Create user request %s", validRequest);
+        logger.info("Create user request {}", validRequest);
 
         Response response =
                 RestAssured.given()
@@ -78,7 +78,7 @@ public class RestApiTest extends RestApiBaseClass {
     @Test(dependsOnMethods = "testWhenCreateUserThenNewUserCreated")
     public void testWhenPatchUserThenStatus200() {
         String validRequest = getUserPatchedJson(userId);
-        logger.info("Patch user request %s", validRequest);
+        logger.info("Patch user request {}", validRequest);
 
         RestAssured.given()
                 .headers(
